@@ -1,0 +1,274 @@
+  :root {
+            --gold: #d4af37;
+            --gold-light: #e8c96a;
+            --gold-dark: #b8962e;
+            --pink: #e8a8b8;
+            --rose: #d68a9f;
+            --dark: #2a2a2a;
+            --cream: #fdf4f7;
+            --cream2: #f8f1e9;
+            --text-light: #666;
+            --mid-gray: #888;
+            --border: rgba(212,175,55,0.18);
+            --shadow-gold: rgba(212,175,55,0.18);
+            --white: #ffffff;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb-bar {
+            background:white; border-bottom:1px solid var(--border);
+            padding:0.9rem 0;
+        }
+        .breadcrumb-inner {
+            max-width:1400px; margin:0 auto; padding:0 2rem;
+            display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;
+        }
+        .breadcrumb-inner a { color:var(--text-light); text-decoration:none; font-size:0.85rem; transition:color 0.2s; }
+        .breadcrumb-inner a:hover { color:var(--gold); }
+        .breadcrumb-inner .sep { color:var(--mid-gray); font-size:0.7rem; }
+        .breadcrumb-inner .current { color:var(--gold); font-weight:500; font-size:0.85rem; }
+
+        /* ========== REFUND HERO ========== */
+        .refund-hero {
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fdf4f7 0%, #f8f1e9 50%, #fdf4f7 100%);
+            overflow: hidden;
+        }
+        .hero-decor {
+            position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;
+        }
+        .hero-decor-circle {
+            position: absolute; border-radius:50%;
+            background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(232,168,184,0.1));
+        }
+        .hdc1 { width:500px; height:500px; top:-200px; right:-150px; }
+        .hdc2 { width:300px; height:300px; bottom:-120px; left:-80px; }
+        .hdc3 { width:180px; height:180px; top:40px; left:15%; animation: floatBob 7s ease-in-out infinite; }
+        .hdc4 { width:100px; height:100px; bottom:30px; right:20%; animation: floatBob 9s ease-in-out infinite reverse; }
+        @keyframes floatBob { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-18px);} }
+
+        .hero-particles { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+        .hp { position:absolute; border-radius:50%; background:var(--gold); opacity:0.25; animation:particleRise 12s linear infinite; }
+        .hp1 { width:5px; height:5px; left:12%; top:70%; animation-delay:0s; }
+        .hp2 { width:4px; height:4px; left:35%; top:80%; animation-delay:3s; }
+        .hp3 { width:6px; height:6px; left:60%; top:75%; animation-delay:6s; }
+        .hp4 { width:3px; height:3px; left:82%; top:65%; animation-delay:9s; }
+        @keyframes particleRise { 0%{transform:translateY(0) scale(1);opacity:0.25;} 100%{transform:translateY(-400px) scale(0.3);opacity:0;} }
+
+        .refund-hero-inner {
+            position:relative; z-index:2; text-align:center; padding:4rem 2rem;
+            animation: heroReveal 0.9s ease forwards;
+        }
+        @keyframes heroReveal { from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);} }
+        .hero-eyebrow {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            background:linear-gradient(135deg,rgba(212,175,55,0.12),rgba(232,168,184,0.12));
+            border:1px solid rgba(212,175,55,0.25); border-radius:30px;
+            padding:8px 22px; font-size:0.8rem; font-weight:600; letter-spacing:1.5px;
+            text-transform:uppercase; color:var(--gold); margin-bottom:1.25rem;
+        }
+        .hero-eyebrow i { font-size:0.75rem; }
+        .refund-hero h1 {
+            font-family:'Poppins', sans-serif; font-size:3.8rem; font-weight:700;
+            line-height:1.1; color:var(--dark); margin-bottom:1rem;
+        }
+        .refund-hero h1 span {
+            background:linear-gradient(135deg,var(--gold),var(--rose));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .hero-divider {
+            width:80px; height:4px; background:linear-gradient(90deg,var(--gold),var(--pink));
+            border-radius:4px; margin:0 auto 1.25rem; box-shadow:0 2px 10px rgba(212,175,55,0.3);
+        }
+        .refund-hero p {
+            font-size:1.1rem; color:var(--text-light); max-width:540px; margin:0 auto;
+            line-height:1.8;
+        }
+
+        /* ========== REFUND MAIN ========== */
+        .refund-main { padding:4rem 0 5rem; background:linear-gradient(135deg,#fdf4f7 0%,#f8f1e9 100%); }
+        .refund-container { max-width:1500px; margin:0 auto; padding:0 2rem; }
+
+        .refund-content { margin:0 auto; }
+
+        .content-intro {
+            text-align:center; margin-bottom:3rem;
+            background:white; border-radius:20px; border:1px solid var(--border);
+            padding:2.5rem; box-shadow:0 8px 25px rgba(212,175,55,0.08);
+        }
+        .intro-icon {
+            width:60px; height:60px; border-radius:50%;
+            background:linear-gradient(135deg,var(--gold),var(--pink));
+            display:flex; align-items:center; justify-content:center;
+            color:white; font-size:1.5rem; margin:0 auto 1rem;
+            box-shadow:0 8px 24px rgba(212,175,55,0.3);
+        }
+        .intro-title { font-family:'Poppins', sans-serif; font-size:2rem; font-weight:700; color:var(--dark); margin-bottom:1rem; }
+        .intro-text { font-size:1rem; color:var(--text-light); line-height:1.8; }
+
+        .refund-sections { display:flex; flex-direction:column; gap:2rem; }
+
+        .refund-section {
+            background:white; border-radius:20px; border:1px solid var(--border);
+            padding:2.5rem; transition:all 0.3s; position:relative; overflow:hidden;
+        }
+        .refund-section:hover { box-shadow:0 12px 35px rgba(212,175,55,0.12); transform:translateY(-2px); }
+        .refund-section::before {
+            content:''; position:absolute; inset:0;
+            background:linear-gradient(135deg,rgba(212,175,55,0.04),rgba(232,168,184,0.04));
+            opacity:0; transition:opacity 0.3s;
+        }
+        .refund-section:hover::before { opacity:1; }
+
+        .section-header { display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem; }
+        .section-icon {
+            width:50px; height:50px; border-radius:15px;
+            background:linear-gradient(135deg,var(--gold),var(--pink));
+            display:flex; align-items:center; justify-content:center;
+            color:white; font-size:1.2rem; box-shadow:0 6px 18px rgba(212,175,55,0.25);
+            flex-shrink:0;
+        }
+        .section-title { font-family:'Poppins', sans-serif; font-size:1.5rem; font-weight:700; color:var(--dark); }
+
+        .section-content { color:var(--text-light); line-height:1.8; }
+        .section-content p { margin-bottom:1.25rem; }
+        .section-content p:last-child { margin-bottom:0; }
+        .section-content ul { margin:1rem 0; padding-left:1.5rem; }
+        .section-content li { margin-bottom:0.5rem; position:relative; }
+        .section-content li::marker { color:var(--gold); }
+        .highlight { color:var(--dark); font-weight:600; }
+
+        .timeline {
+            margin:1.5rem 0; position:relative;
+        }
+        .timeline::before {
+            content:''; position:absolute; left:15px; top:0; bottom:0;
+            width:2px; background:linear-gradient(to bottom, var(--gold), var(--pink));
+            border-radius:2px;
+        }
+        .timeline-item {
+            position:relative; padding-left:50px; margin-bottom:1.5rem;
+        }
+        .timeline-item:last-child { margin-bottom:0; }
+        .timeline-dot {
+            position:absolute; left:6px; top:6px; width:20px; height:20px;
+            border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--pink));
+            border:3px solid white; box-shadow:0 2px 8px rgba(212,175,55,0.3);
+        }
+        .timeline-content { background:#f9f7f5; padding:1rem; border-radius:10px; border-left:3px solid var(--gold); }
+        .timeline-title { font-weight:600; color:var(--dark); margin-bottom:0.5rem; }
+        .timeline-text { font-size:0.9rem; color:var(--text-light); }
+
+        .contact-section {
+            background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+            color:white; border-radius:20px; padding:3rem 2.5rem; text-align:center;
+            margin-top:3rem;
+        }
+        .contact-icon {
+            width:60px; height:60px; border-radius:50%;
+            background:rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center;
+            color:white; font-size:1.5rem; margin:0 auto 1.5rem;
+        }
+        .contact-title { font-family:'Poppins', sans-serif; font-size:2rem; font-weight:700; margin-bottom:1rem; }
+        .contact-text { font-size:1rem; margin-bottom:2rem; opacity:0.9; line-height:1.7; }
+        .contact-btn {
+            display:inline-flex; align-items:center; gap:0.6rem;
+            padding:14px 28px; border-radius:30px; border:2px solid rgba(255,255,255,0.3);
+            background:rgba(255,255,255,0.1); color:white; text-decoration:none;
+            font-weight:600; transition:all 0.3s;
+        }
+        .contact-btn:hover { background:white; color:var(--gold); }
+
+        /* ========== BACK TO TOP ========== */
+        .back-top {
+            position:fixed; bottom:1.5rem; right:1.5rem; z-index:800;
+            width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+            background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:white;
+            font-size:1rem; box-shadow:0 6px 20px rgba(212,175,55,0.35);
+            opacity:0; transform:translateY(20px); transition:all 0.3s;
+        }
+        .back-top.show { opacity:1; transform:translateY(0); }
+        .back-top:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(212,175,55,0.5); }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeUp { from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);} }
+
+        .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.65s ease, transform 0.65s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        /* ========== RESPONSIVE ========== */
+        @media(max-width:1024px) {
+            .refund-container { padding:0 1.5rem; }
+            .content-intro { padding:2rem; }
+            .intro-title { font-size:1.8rem; }
+        }
+        @media(max-width:768px) {
+            .breadcrumb-inner { padding:0 1.5rem; }
+            .refund-hero h1 { font-size:3rem; }
+            .hero-divider { width:70px; }
+            .refund-main { padding:3rem 0 4rem; }
+            .refund-content { max-width:100%; }
+            .content-intro { padding:2rem 1.5rem; }
+            .intro-icon { width:50px; height:50px; font-size:1.2rem; }
+            .intro-title { font-size:1.6rem; }
+            .refund-section { padding:2rem 1.5rem; }
+            .section-header { margin-bottom:1.25rem; }
+            .section-icon { width:45px; height:45px; font-size:1.1rem; }
+            .section-title { font-size:1.3rem; }
+            .section-content { font-size:0.9rem; }
+            .timeline { margin:1rem 0; }
+            .timeline-item { padding-left:40px; }
+            .timeline-dot { left:2px; top:4px; width:16px; height:16px; }
+            .timeline-content { padding:0.8rem; }
+            .contact-section { padding:2.5rem 2rem; }
+            .contact-title { font-size:1.8rem; }
+            .contact-text { font-size:0.95rem; }
+            .contact-btn { padding:12px 24px; font-size:0.95rem; }
+        }
+        @media(max-width:480px) {
+            .refund-container { padding:0 1rem; }
+            .breadcrumb-inner { padding:0 1rem; flex-wrap:wrap; gap:0.5rem; }
+            .breadcrumb-inner a, .breadcrumb-inner span { font-size:0.8rem; }
+            .refund-hero { min-height:320px; }
+            .refund-hero h1 { font-size:2.5rem; }
+            .refund-hero p { font-size:0.95rem; }
+            .hero-divider { width:60px; }
+            .refund-main { padding:2.5rem 0 3.5rem; }
+            .content-intro { padding:1.5rem 1rem; }
+            .intro-icon { width:45px; height:45px; font-size:1.1rem; }
+            .intro-title { font-size:1.4rem; }
+            .intro-text { font-size:0.9rem; }
+            .refund-sections { gap:1.5rem; }
+            .refund-section { padding:1.5rem 1rem; border-radius:16px; }
+            .section-header { gap:1rem; margin-bottom:1rem; }
+            .section-icon { width:40px; height:40px; font-size:1rem; }
+            .section-title { font-size:1.1rem; }
+            .section-content { font-size:0.85rem; line-height:1.7; }
+            .section-content ul { padding-left:1.2rem; }
+            .timeline { margin:1rem 0; }
+            .timeline-item { padding-left:35px; margin-bottom:1rem; }
+            .timeline-dot { left:0; top:2px; width:14px; height:14px; }
+            .timeline-content { padding:0.7rem; }
+            .timeline-title { font-size:0.9rem; margin-bottom:0.3rem; }
+            .timeline-text { font-size:0.8rem; }
+            .contact-section { padding:2rem 1.5rem; border-radius:16px; margin-top:2rem; }
+            .contact-icon { width:50px; height:50px; font-size:1.2rem; margin-bottom:1.25rem; }
+            .contact-title { font-size:1.6rem; }
+            .contact-text { font-size:0.9rem; margin-bottom:1.5rem; }
+            .contact-btn { padding:11px 20px; font-size:0.9rem; }
+            .back-top { bottom:1rem; right:1rem; width:42px; height:42px; font-size:0.9rem; }
+        }
