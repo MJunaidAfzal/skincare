@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <title>@yield('title', 'Glamour Skincare')</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -14,7 +15,7 @@
     <header class="header" id="header">
         <div class="nav-container">
             <a href="{{ route('home') }}" class="logo">
-                <img src="{{ asset('images/logo.png') }}" alt="Glamour Skincare">
+                <img src="{{ asset('images/dashboard-logo.png') }}" alt="Glamour Skincare">
             </a>
 
             <ul class="nav-menu">
@@ -49,7 +50,7 @@
             <div class="footer-content">
                 <div class="footer-section footer-brand">
                     <div class="logo">
-                        <img src="{{ asset('images/logo.png') }}" alt="Glamour Skincare">
+                        <img src="{{ asset('images/download.png') }}" alt="Glamour Skincare">
                     </div>
                     <p>Indulge in luxury skincare with nature-inspired formulations.</p>
                     <div class="social-icons">
